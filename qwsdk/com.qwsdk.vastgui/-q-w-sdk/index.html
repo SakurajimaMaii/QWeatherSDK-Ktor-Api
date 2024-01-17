@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>QWSdk</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            qwsdk
+                    </a>
+            </div>
+            <div class="library-version">
+1.1.1            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="qwsdk::com.qwsdk.vastgui/QWSdk///PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">qwsdk</a><span class="delimiter">/</span><a href="../index.html">com.qwsdk.vastgui</a><span class="delimiter">/</span><span class="current">QWSdk</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>QWSdk</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">QWSdk</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>configuration<span class="token operator">: </span><a href="-configuration/index.html">QWSdk.Configuration</a></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SakurajimaMaii/QWeatherSDK-Ktor/tree/canary/src/main/kotlin/com/qwsdk/vastgui/QWSdk.kt#L74">source</a>)</span></span></div><p class="paragraph"><a href="https://dev.qweather.com/docs/api/">QWSdk</a></p><p class="paragraph">和风天气开发服务提供了基于位置的天气数据，包括实况天气、30天预报、 逐小时预报、空气质量AQI，灾害预警、分钟级降水、生活指数等天气数据服务。</p><ul><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-geo/index.html">GeoAPI</a> 和风天气 GeoAPI 提供全球地理位位置、全球城市搜索服务， 支持经纬度坐标反查、多语言、模糊搜索等功能。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-weather/index.html">城市天气</a> 城市天气预报提供包括中国 3000+ 市县区在内的全球 20 万+城市的天气预报，支持实时天气、最多 30 天预报及最多 7 天逐小时天气预报。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-minutely/index.html">分钟预报</a> 分钟级降水 API （临近预报）支持中国 1 公里精度的分钟 级降雨预报数据，为每一分钟的降雨进行精准预测。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-grid/index.html">格点天气</a> 以经纬度为基准的全球高精度、公里级、格点化天气预报产品， 包括任意经纬度的实时天气和天气预报。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-warning/index.html">预警</a> 和风天气灾害预警API提供了全球极端天气预警服务，覆盖中国 及全球数十个国家或地区。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-indices/index.html">天气指数</a> 天气生活指数包括洗车指数、穿衣指数、感冒指数、过敏指数、 紫外线指数、钓鱼指数等数据。天气指数支持中国 3000+ 个市县区和海外 15 万个城市 天气预报。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-air-beta/index.html">空气质量(beta)</a> 全球空气质量，可以轻松的获取指定位置和城市的空气 质量数据以及官方监测站数据。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-air/index.html">空气质量</a> 中国 3000+ 市县区及 1700+ 监测站点的空气质量 AQI 数据，包 括空气质量（AQI）实时数据，空气质量未来 5 天预报。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-time-machine/index.html">时光机</a> 时光机可以获取最近 10 天的历史天气和空气质量数据。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-tropical/index.html">热带气旋（台风）</a> 热带气旋（台风）API 提供全球主要海洋流域的 台风信息，包括台风实时位置、等级、气压、风速，还可查询台风路径和台风预报信息。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-ocean/index.html">海洋数据</a> 海洋数据API提供全球主要港口和城市的潮汐和潮流数据。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-solar-radiation/index.html">太阳辐射</a> 太阳辐射 API 支持获取全球任意坐标的辐射数据， 包括净太阳辐射，太阳散射辐射和太阳直接辐射。</p></li><li><p class="paragraph"><a href="../../com.qwsdk.vastgui.api/-astronomy/index.html">天文</a> 天文API提供了全球任意地点未来 60 天的日出日落、太阳 高度角、月升月落和月相数据。</p></li></ul><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// 获取单例对象<br>val qw = QWSdk<br>    .getInstance(Configuration(Plan.Standard, &quot;&lt;Your-Key&gt;&quot;))</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="158180609%2FConstructors%2F769193423" anchor-label="QWSdk" id="158180609%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-q-w-sdk.html"><span><span>QWSdk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="158180609%2FConstructors%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">private </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configuration<span class="token operator">: </span><a href="-configuration/index.html">QWSdk.Configuration</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1878355615%2FClasslikes%2F769193423" anchor-label="BasinType" id="1878355615%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-basin-type/index.html"><span>Basin</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1878355615%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-basin-type/index.html">BasinType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-basin-type/index.html">QWSdk.BasinType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">需要查询的台风所在的流域，例如中国处于西北太平洋，即 basin=NP。当前仅支持 NP</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-474457914%2FClasslikes%2F769193423" anchor-label="Companion" id="-474457914%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-474457914%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a> : <span data-unresolved-link="com.ave.vastgui.core.extension/SingletonHolder///PointingToDeclaration/">SingletonHolder</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">QWSdk</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-configuration/index.html">QWSdk.Configuration</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="346745244%2FClasslikes%2F769193423" anchor-label="Configuration" id="346745244%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-configuration/index.html"><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="346745244%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-configuration/index.html">Configuration</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>plan<span class="token operator">: </span><a href="-plan/index.html">QWSdk.Plan</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">QWSdk 配置</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="85024975%2FClasslikes%2F769193423" anchor-label="CountryCode" id="85024975%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-country-code/index.html"><span>Country</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="85024975%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-country-code/index.html">CountryCode</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-country-code/index.html">QWSdk.CountryCode</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://github.com/qwd/LocationList/blob/master/iso3166.csv">ISO 3166      * 国际标准化组织（ISO）发布的全球国家代码标准</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1970007631%2FClasslikes%2F769193423" anchor-label="IndicesType" id="-1970007631%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-indices-type/index.html"><span>Indices</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1970007631%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-indices-type/index.html">IndicesType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-indices-type/index.html">QWSdk.IndicesType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/resource/indices-info/">天气指数类型</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1471691586%2FClasslikes%2F769193423" anchor-label="Lang" id="1471691586%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-lang/index.html"><span><span>Lang</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1471691586%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-lang/index.html">Lang</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-lang/index.html">QWSdk.Lang</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/resource/language/#language-code">多语言代码</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2043054695%2FClasslikes%2F769193423" anchor-label="Plan" id="2043054695%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plan/index.html"><span><span>Plan</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2043054695%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-plan/index.html">Plan</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>host<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-plan/index.html">QWSdk.Plan</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/finance/subscription">订阅</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1533030802%2FClasslikes%2F769193423" anchor-label="POIType" id="-1533030802%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-o-i-type/index.html"><span><span>POIType</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1533030802%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-p-o-i-type/index.html">POIType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-p-o-i-type/index.html">QWSdk.POIType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">POI类型</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-291323325%2FClasslikes%2F769193423" anchor-label="Units" id="-291323325%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-units/index.html"><span><span>Units</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-291323325%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-units/index.html">Units</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-units/index.html">QWSdk.Units</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/resource/unit">度量衡单位</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-328276746%2FProperties%2F769193423" anchor-label="apiKey" id="-328276746%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-key.html"><span>api</span><wbr></wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-328276746%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">internal </span><span class="token keyword"></span><span class="token keyword">var </span><a href="api-key.html">apiKey</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-97036036%2FProperties%2F769193423" anchor-label="apiPlan" id="-97036036%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-plan.html"><span>api</span><wbr></wbr><span><span>Plan</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-97036036%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">internal </span><span class="token keyword"></span><span class="token keyword">var </span><a href="api-plan.html">apiPlan</a><span class="token operator">: </span><a href="-plan/index.html">QWSdk.Plan</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2090631728%2FProperties%2F769193423" anchor-label="client" id="-2090631728%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="client.html"><span><span>client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2090631728%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">internal </span><span class="token keyword"></span><span class="token keyword">var </span><a href="client.html">client</a><span class="token operator">: </span><span data-unresolved-link="io.ktor.client/HttpClient///PointingToDeclaration/">HttpClient</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="938263113%2FProperties%2F769193423" anchor-label="configuration" id="938263113%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration.html"><span><span>configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="938263113%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">private </span><span class="token keyword"></span><span class="token keyword">val </span><a href="configuration.html">configuration</a><span class="token operator">: </span><a href="-configuration/index.html">QWSdk.Configuration</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="840216309%2FFunctions%2F769193423" anchor-label="air" id="840216309%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="air.html"><span><span>air</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840216309%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="air.html"><span class="token function">air</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-air/index.html">Air</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1093584155%2FFunctions%2F769193423" anchor-label="airBeta" id="-1093584155%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="air-beta.html"><span>air</span><wbr></wbr><span><span>Beta</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1093584155%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="air-beta.html"><span class="token function">airBeta</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-air-beta/index.html">AirBeta</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-825908973%2FFunctions%2F769193423" anchor-label="astronomy" id="-825908973%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="astronomy.html"><span><span>astronomy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-825908973%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="astronomy.html"><span class="token function">astronomy</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-astronomy/index.html">Astronomy</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-332751154%2FFunctions%2F769193423" anchor-label="geo" id="-332751154%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="geo.html"><span><span>geo</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-332751154%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="geo.html"><span class="token function">geo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-geo/index.html">Geo</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1115718091%2FFunctions%2F769193423" anchor-label="grid" id="-1115718091%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="grid.html"><span><span>grid</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1115718091%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="grid.html"><span class="token function">grid</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-grid/index.html">Grid</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1904255432%2FFunctions%2F769193423" anchor-label="indices" id="-1904255432%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="indices.html"><span><span>indices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1904255432%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="indices.html"><span class="token function">indices</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-indices/index.html">Indices</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-23869382%2FFunctions%2F769193423" anchor-label="minutely" id="-23869382%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="minutely.html"><span><span>minutely</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-23869382%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="minutely.html"><span class="token function">minutely</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-minutely/index.html">Minutely</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1896642881%2FFunctions%2F769193423" anchor-label="ocean" id="1896642881%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ocean.html"><span><span>ocean</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1896642881%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="ocean.html"><span class="token function">ocean</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-ocean/index.html">Ocean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2061470341%2FFunctions%2F769193423" anchor-label="solarRadiation" id="-2061470341%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="solar-radiation.html"><span>solar</span><wbr></wbr><span><span>Radiation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2061470341%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="solar-radiation.html"><span class="token function">solarRadiation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-solar-radiation/index.html">SolarRadiation</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="692243333%2FFunctions%2F769193423" anchor-label="timeMachine" id="692243333%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="time-machine.html"><span>time</span><wbr></wbr><span><span>Machine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="692243333%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="time-machine.html"><span class="token function">timeMachine</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-time-machine/index.html">TimeMachine</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="337627159%2FFunctions%2F769193423" anchor-label="tropical" id="337627159%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tropical.html"><span><span>tropical</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="337627159%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="tropical.html"><span class="token function">tropical</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-tropical/index.html">Tropical</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1541498851%2FFunctions%2F769193423" anchor-label="warning" id="1541498851%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="warning.html"><span><span>warning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1541498851%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="warning.html"><span class="token function">warning</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-warning/index.html">Warning</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1147637109%2FFunctions%2F769193423" anchor-label="weather" id="-1147637109%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="weather.html"><span><span>weather</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1147637109%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="weather.html"><span class="token function">weather</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.qwsdk.vastgui.api/-weather/index.html">Weather</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

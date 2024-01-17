@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>station</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            qwsdk
+                    </a>
+            </div>
+            <div class="library-version">
+1.1.1            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageIds="qwsdk::com.qwsdk.vastgui.api/AirBeta/station/#com.qwsdk.vastgui.utils.LocationID#com.qwsdk.vastgui.QWSdk.Lang/PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">qwsdk</a><span class="delimiter">/</span><a href="../index.html">com.qwsdk.vastgui.api</a><span class="delimiter">/</span><a href="index.html">AirBeta</a><span class="delimiter">/</span><span class="current">station</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>station</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="station.html"><span class="token function">station</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">location<span class="token operator">: </span><a href="../../com.qwsdk.vastgui.utils/-location-i-d/index.html">LocationID</a><span class="token punctuation">, </span></span><span class="parameter ">lang<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-lang/index.html">QWSdk.Lang</a><span class="token operator"> = </span>QWSdk.Lang.ZH</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.qwsdk.vastgui.entity.airbeta.station/-air-beta-station-bean/index.html">AirBetaStationBean</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SakurajimaMaii/QWeatherSDK-Ktor/tree/canary/src/main/kotlin/com/qwsdk/vastgui/api/AirBeta.kt#L83">source</a>)</span></span></div><p class="paragraph"><a href="https://dev.qweather.com/docs/api/air-quality/air-station/">监测站数据(beta)</a></p><p class="paragraph">全球空气质量监测站数据，提供各个国家或地区监测站的污染物浓度值。</p><p class="paragraph">警告：监测站数据是实验性数据，仅供参考，可能受到各种因素的影响， 我们无法确保该数据的可用性，请优先使用空气质量指数数据。</p><p class="paragraph"><strong>注意：全新的实时空气质量目前处于beta阶段，标准订阅暂不收取费用。数据内容在正式发布后可能会有所不同。</strong></p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>location</span></span></u></div></span></div><div><div class="title"><p class="paragraph">需要查询的地区，仅支持 <a href="../../com.qwsdk.vastgui.utils/-location-i-d/index.html">LocationID</a> ，LocationID 可通过 <a href="../-geo/index.html">GeoAPI</a> 获取。</p></div></div></div></div><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>lang</span></span></u></div></span></div><div><div class="title"><p class="paragraph">多语言设置，请阅读 <a href="https://dev.qweather.com/docs/resource/language/">多语言</a> 文档，了解我们的多语言是如何工作、如何设置以及数据是否支持多语言。</p></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

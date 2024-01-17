@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Geo</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            qwsdk
+                    </a>
+            </div>
+            <div class="library-version">
+1.1.1            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="qwsdk::com.qwsdk.vastgui.api/Geo///PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">qwsdk</a><span class="delimiter">/</span><a href="../index.html">com.qwsdk.vastgui.api</a><span class="delimiter">/</span><span class="current">Geo</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Geo</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Geo</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>qwSdk<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/index.html">QWSdk</a></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SakurajimaMaii/QWeatherSDK-Ktor/tree/canary/src/main/kotlin/com/qwsdk/vastgui/api/Geo.kt#L47">source</a>)</span></span></div><p class="paragraph"><a href="https://dev.qweather.com/docs/api/geoapi/">GeoAPI</a></p><p class="paragraph">和风天气 GeoAPI 提供全球地理位位置、全球城市搜索服务，支持经纬度坐标反查、多语言、模糊搜索等功能。</p><p class="paragraph">天气数据是基于地理位置的数据，因此获取天气之前需要先知道具体的位置信息。和风天气提供一个功能强大 的位置信息搜索 API 服务： GeoAPI 。通过 GeoAPI ，你可获取到需要查询城市或 POI 的基本信息，包 括查询地区的 Location ID（你需要这个 ID 去查询天气），多语言名称、经纬度、时区、海拔、Rank 值、 归属上级行政区域、所在行政区域等。</p><p class="paragraph">除此之外，GeoAPI还可以帮助你：</p><ul><li><p class="paragraph">避免重名城市的困扰</p></li><li><p class="paragraph">支持名称模糊搜索</p></li><li><p class="paragraph">在你的应用或网站中根据用户输入的名称返回多个城市结果，便于用户选择准确的城市并返回该城市天气</p></li><li><p class="paragraph">在你的应用或网站中展示热门城市</p></li><li><p class="paragraph">不需要维护城市列表，城市信息更新实时获取</p></li></ul></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1868563407%2FConstructors%2F769193423" anchor-label="Geo" id="1868563407%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-geo.html"><span><span>Geo</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1868563407%2FConstructors%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">internal </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">qwSdk<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/index.html">QWSdk</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1836343106%2FProperties%2F769193423" anchor-label="qwSdk" id="1836343106%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="qw-sdk.html"><span>qw</span><wbr></wbr><span><span>Sdk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1836343106%2FProperties%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">private </span><span class="token keyword"></span><span class="token keyword">val </span><a href="qw-sdk.html">qwSdk</a><span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/index.html">QWSdk</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1053003435%2FFunctions%2F769193423" anchor-label="cityLookup" id="1053003435%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="city-lookup.html"><span>city</span><wbr></wbr><span><span>Lookup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1053003435%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="city-lookup.html"><span class="token function">cityLookup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">location<span class="token operator">: </span><a href="../../com.qwsdk.vastgui.utils/-location/index.html">Location</a><span class="token punctuation">, </span></span><span class="parameter ">adm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">range<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-country-code/index.html">QWSdk.CountryCode</a><span class="token operator"> = </span>QWSdk.CountryCode.CN<span class="token punctuation">, </span></span><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">10</span><span class="token punctuation">, </span></span><span class="parameter ">lang<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-lang/index.html">QWSdk.Lang</a><span class="token operator"> = </span>QWSdk.Lang.ZH</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.qwsdk.vastgui.entity.geo.lookup/-geo-lookup/index.html">GeoLookup</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/api/geoapi/city-lookup/">城市搜索</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="358180473%2FFunctions%2F769193423" anchor-label="poiLookup" id="358180473%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="poi-lookup.html"><span>poi</span><wbr></wbr><span><span>Lookup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="358180473%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="poi-lookup.html"><span class="token function">poiLookup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">location<span class="token operator">: </span><a href="../../com.qwsdk.vastgui.utils/-location/index.html">Location</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-p-o-i-type/index.html">QWSdk.POIType</a><span class="token punctuation">, </span></span><span class="parameter ">city<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">10</span><span class="token punctuation">, </span></span><span class="parameter ">lang<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-lang/index.html">QWSdk.Lang</a><span class="token operator"> = </span>QWSdk.Lang.ZH</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.qwsdk.vastgui.entity.geo.poi/-geo-poi/index.html">GeoPoi</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/api/geoapi/poi-lookup/">POI搜索</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-401330436%2FFunctions%2F769193423" anchor-label="poiRange" id="-401330436%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="poi-range.html"><span>poi</span><wbr></wbr><span><span>Range</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-401330436%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="poi-range.html"><span class="token function">poiRange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">location<span class="token operator">: </span><a href="../../com.qwsdk.vastgui.utils/-coordinate/index.html">Coordinate</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-p-o-i-type/index.html">QWSdk.POIType</a><span class="token punctuation">, </span></span><span class="parameter ">radius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">5</span><span class="token punctuation">, </span></span><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">10</span><span class="token punctuation">, </span></span><span class="parameter ">lang<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-lang/index.html">QWSdk.Lang</a><span class="token operator"> = </span>QWSdk.Lang.ZH</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.qwsdk.vastgui.entity.geo.poi.range/-geo-poi-range/index.html">GeoPoiRange</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/api/geoapi/poi-range/">POI范围搜索</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1200756675%2FFunctions%2F769193423" anchor-label="topCity" id="-1200756675%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="top-city.html"><span>top</span><wbr></wbr><span><span>City</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1200756675%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="top-city.html"><span class="token function">topCity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">range<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-country-code/index.html">QWSdk.CountryCode</a><span class="token operator"> = </span>QWSdk.CountryCode.CN<span class="token punctuation">, </span></span><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">10</span><span class="token punctuation">, </span></span><span class="parameter ">lang<span class="token operator">: </span><a href="../../com.qwsdk.vastgui/-q-w-sdk/-lang/index.html">QWSdk.Lang</a><span class="token operator"> = </span>QWSdk.Lang.ZH</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.qwsdk.vastgui.entity.geo.top/-geo-top/index.html">GeoTop</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="https://dev.qweather.com/docs/api/geoapi/top-city/">热门城市查询</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
